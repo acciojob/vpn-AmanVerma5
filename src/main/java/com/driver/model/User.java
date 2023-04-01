@@ -23,7 +23,7 @@ public class User {
     List<Connection> connectionList=new ArrayList<>();
 
     @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
-    Country country;
+    Country Originalcountry;
 
     public User() {
     }
@@ -37,7 +37,7 @@ public class User {
         this.connected = connected;
         this.serviceProviderList = serviceProviderList;
         this.connectionList = connectionList;
-        this.country = country;
+        this.Originalcountry = country;
     }
 
     public int getId() {
@@ -80,7 +80,7 @@ public class User {
         this.maskedIp = maskedIp;
     }
 
-    public boolean isConnected() {
+    public boolean getConnected() {
         return connected;
     }
 
@@ -104,11 +104,11 @@ public class User {
         this.connectionList = connectionList;
     }
 
-    public Country getCountry() {
-        return country;
+    public Country getOriginalCountry() {
+        return Originalcountry;
     }
 
     public void setCountry(Country country) {
-        this.country = country;
+        this.Originalcountry = country;
     }
 }
