@@ -108,7 +108,7 @@ public class User {
         return Originalcountry;
     }
 
-    public void setCountry(Country country) {
+    public void setOriginalCountry(Country country) {
         this.Originalcountry = country;
     }
 }
